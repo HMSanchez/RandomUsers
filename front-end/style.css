@@ -1,0 +1,56 @@
+tr {
+    display: inline-flex;
+}
+div {
+    padding: 10px;
+    margin: 10px;
+    background: orange;
+}
+td {
+    padding: 20px;
+    margin: 20px;
+background-color: coral;
+    font-size: 20px;
+   letter-spacing: 1px; 
+}
+
+table {
+    text-align: center;
+}
+ul {
+    display: flex;
+    list-style: none;
+align-content: center;
+justify-content: center;
+align-items: center
+}
+ul li {
+    padding: 10px;
+    margin: 10px;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background-color: brown;
+    font-family: 'Lato', sans-serif;
+}
+h1{
+    text-align: center;
+}
+.userdetails {
+    background-color: coral
+}
+#detailstd {
+    background: none;
+}
+#imgtd {
+    background: none;
+}
+
+#imgdiv{
+    /* margin: auto; */
+}
+#userImage {
+    border: 5px solid burlywood;
+}

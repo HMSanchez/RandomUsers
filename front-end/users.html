@@ -1,0 +1,56 @@
+<h1>Users</h1>
+<div id="queriesContainer">
+    <ul>
+        <li>
+            <p>Search:
+                <input ng-model="query.fullname" type="text" placeholder="john doe" autofocus>
+            </p>
+        </li>
+        <li>
+            <p>Age:
+                <input ng-model="query.dob.age" type="text" placeholder="21" autofocus>
+            </p>
+        </li>
+        <li>
+            <input type="radio" name="gender" data-ng-model="filterGender" value="male"> Male
+            <br>
+            <input type="radio" name="gender" data-ng-model="filterGender" value="female"> Female
+            <br>
+            <input type="radio" name="gender" data-ng-model="filterGender" value="" > Both
+            <br>
+        </li>
+        <li>
+            <select data-ng-model="nat.nat">
+                <option value="">NAT</option>
+                <option value='us'>US</option>
+                <option value='fr'>FR</option>
+                <option value='gb'>GB</option>
+            </select>
+        </li>
+    </ul>
+</div>
+<div id="user_holder">
+    <!-- <select data-ng-model="filterGender">
+        <option value=''>GENDER</option>
+        <option value='male'>Male</option>
+        <option value='female'>Female</option>
+    </select> -->
+
+    <table>
+        <tr ng-repeat="x in users | orderBy : ['name.last','name.first'] | filter:query | filter:nat | gender:filterGender">
+            <td>
+                <a href="/#!/{{ x.id }}">
+                    <img src={{x.picture.medium}}>
+                </a>
+                <br/>
+                 {{ x.name.first | capitalize}}
+                 <br>
+                  {{ x.name.last | capitalize}} 
+                  <br>
+                  {{ x.nat }}
+                  <br>
+                  {{x.dob.age}}
+            </td>
+        </tr>
+    </table>
+</div>
